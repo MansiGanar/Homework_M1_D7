@@ -1,0 +1,242 @@
+<!--You have been assigned to the creation of a Smartphone Shop Website. The homepage you're about to write is just a showcase of the products of the shop with some extra information. No shopping cart / checkout features are required.
+
+
+
+Complete exercises from 1 to 6 with just plain HTML
+
+
+
+EX1.: Add an h1 tag with the name of your shop
+
+EX2.: Add a TABLE with the top 5 products of your shop
+
+EX3.: Insert for each product an image, a title, a description and a price
+
+EX4.: Add links to existing Amazon products for each item in the table
+
+EX5.: Add a footer with the address and the name of your shop
+
+EX6.: Add a message board where the user can type a message in it (no real posting/saving features required!)
+
+
+
+This additional exercises, from 7 to 12, use JavaScript as well
+
+
+
+EX7.: Write a function to change the h1 text
+
+EX8.: Write a function to change the page background color
+
+EX9.: Write a function to change the footer address with a fake one
+
+EX10.: Write a function to add a CSS class to every Amazon link
+
+EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
+
+EX12: Write a function to color the price of each product in a different one every time it's invoked -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+
+    <style>
+      a {
+        color: black;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      .mystyle {
+        width: 100%;
+        padding: 25px;
+        background-color: coral;
+        color: white;
+        font-size: 25px;
+        box-sizing: border-box;
+        }
+</style>
+    </style>
+  </head>
+
+  <body>
+    <h1 id="mainhead">Shoppping's Shop</h1>
+    <table id="newsTable" cellpadding="0">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <th>
+          <a
+            href="https://www.amazon.in/Apple-iPad-Air-10-9-inch-Wi-Fi-64GB/dp/B08J6YZZ14/ref=lp_4363895031_1_1"
+            >2020 Apple iPad Air</a
+          >
+        </th>
+        <th>
+          <p>
+            Stunning 27.69 cm (10.9-inch) Liquid Retina display with True Tone
+            and P3 wide colour.A14 Bionic chip with Neural Engine. 12MP back
+            camera, 7MP FaceTime HD front camera.A14 Bionic chip with Neural
+            Engine.
+          </p>
+        </th>
+        <th>
+          <img
+            src="https://m.media-amazon.com/images/I/71YxgZu73mL._SX522_.jpg"
+            alt="2020 Apple iPad Air"
+          />
+        </th>
+        <th class="price">₹51,900</th>
+      </tr>
+
+      <tr>
+        <th>
+          <a
+            href="https://www.amazon.in/Apple-iPad-Mini-Wi-Fi-64GB/dp/B07Q1CFR7P/ref=lp_4363895031_1_2"
+            >2019 Apple iPad Mini</a
+          >
+        </th>
+        <th>
+          <p>
+            20.1 cm (7.9-inch) Retina display with True Tone and wide color.A12
+            Bionic chip.Touch ID fingerprint sensor. 8MP back camera, 7MP
+            FaceTime HD front camera.Stereo speakers
+          </p>
+        </th>
+        <th>
+          <img
+            src="https://m.media-amazon.com/images/I/81kzAlgOAIL._SY550_.jpg"
+            alt="2019 Apple iPad Mini"
+          />
+        </th>
+        <th class="price">₹34,900</th>
+      </tr>
+
+      <tr>
+        <th>
+          <a
+            href="https://www.amazon.in/Apple-iPad-Pro-11-inch-27-96-Cellular/dp/B0932S78QJ/ref=lp_4363895031_1_3"
+            >2021 Apple iPad Pro</a
+          >
+        </th>
+        <th>
+          <p>
+            Apple M1 chip for next-level performance.Stunning 27.96 cm (11-inch)
+            Liquid Retina display with ProMotion, True Tone, and P3 wide color.
+            TrueDepth camera system featuring Ultra Wide front camera with
+            Center Stage.12MP Wide camera, 10MP Ultra Wide camera, and LiDAR
+            Scanner for immersive AR.ultrafast Wi-Fi and 4GLTE.
+          </p>
+        </th>
+        <th>
+          <img
+            src="https://m.media-amazon.com/images/I/81a-rN2A3DS._SX522_.jpg"
+            alt="2021 Apple iPad Pro"
+          />
+        </th>
+        <th class="price">83,390</th>
+      </tr>
+
+      <tr>
+        <th>
+          <a href="https://www.amazon.in/dp/B08L5WHFT9">2021 Apple iPad Pro</a>
+        </th>
+        <th>
+          <p>
+            Apple M1 chip for next-level performance.Brilliant 32.77 cm
+            (12.9-inch) Liquid Retina XDR display with ProMotion, True Tone, and
+            P3 wide color.TrueDepth camera system featuring Ultra Wide camera
+            with Center Stage.12MP Wide camera, 10MP Ultra Wide camera, and
+            LiDAR Scanner for immersive AR.
+          </p>
+        </th>
+        <th>
+          <img
+            src="https://m.media-amazon.com/images/I/81+N4PFF7jS._SX679_.jpg"
+            alt="2021 Apple iPad Pro"
+          />
+        </th>
+        <th class="price">₹99,900</th>
+      </tr>
+
+      <tr>
+        <th>
+          <a href="https://www.amazon.in/dp/B08L5S9TL1?th=1"
+            >Apple iPad Mini
+          </a>
+        </th>
+        <th>
+          <p>
+            Product 1: 7.9-inch (20.07 cms) Retina display with True Tone and
+            wide color.Product 1: A12 Bionic chip.Product 1: Touch ID
+            fingerprint sensor. Product 1: 8MP back camera, 7MP FaceTime HD
+            front camera.Product 2: Apple Pencil features the precision,
+            responsiveness and natural fluidity of a traditional writing
+            instrument and the versatility to become so much more.Product 2:
+            Handwrite in any text field with Scribble. With Apple Pencil, you
+            can turn iPad into your notepad, canvas or just about anything else
+            you can imagine.Product 2: Compatible with iPad Pro 12.9-inch (1st
+            and 2nd generation) , iPad Pro 10.5-inch, iPad Pro 9.7-inch, iPad
+            (6th, 7th and 8th generation), iPad Air (3rd generation), iPad mini
+            (5th generation)
+          </p>
+        </th>
+        <th>
+          <img
+            src="https://m.media-amazon.com/images/I/81sw31CXYAL._SY741_.jpg"
+            alt="Apple iPad Mini "
+          />
+        </th>
+        <th class="price">₹57,150</th>
+      </tr>
+    </table>
+
+    <div>
+      <h2>Contact us</h2>
+      <form>
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br />
+        <label for="message">Write your message:</label><br />
+        <textarea rows="4" cols="50" name="message"> </textarea>
+      </form>
+    </div>
+    <script lang="text/javascript">
+
+        const createNewElement = function() {
+
+        <button onclick="myFunction()"> Image </button>
+
+        function myFunction() {
+            let element = document.getElementsByTag("img")[0];
+            element.classList.toggle("mystyle");
+        }
+      }
+    </script>
+  </body>
+  <footer>
+    <p>The Bill's Shop</p>
+    <p class="address">Address:Lublin Poland</p>
+  </footer>
+</html>
